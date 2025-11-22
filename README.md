@@ -32,8 +32,7 @@ By entering your subject names, credits, and grades, the application instantly c
 3.Install the required libraries (if any):
       pip install -r requirements.txt
 
-4.Run the application:
-      python main.py
+4. Run the Frontend file
 
 🧪 Instructions for Testing:
 1.Open the application.
