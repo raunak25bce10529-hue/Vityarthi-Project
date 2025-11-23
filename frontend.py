@@ -16,7 +16,7 @@ style.configure("TButton", font=("Segoe UI", 10, "bold"), padding=6)
 style.configure("TNotebook", background="#0d1117")
 style.configure("TFrame", background="#0d1117")
 
-# ---------------- ANIMATION FUNCTION ----------------
+# ANIMATION FUNCTION
 def fade_in(window):
     for i in range(0, 11):
         window.attributes('-alpha', i/10)
@@ -26,21 +26,17 @@ def fade_in(window):
 app.attributes('-alpha', 0.0)
 fade_in(app)
 
-# ---------------- TABS ----------------
+# TABS 
 tabs = ttk.Notebook(app)
 tabs.pack(expand=1, fill='both')
-
 tab1 = ttk.Frame(tabs)
 tab2 = ttk.Frame(tabs)
-
 tabs.add(tab1, text='GPA Calculator')
 tabs.add(tab2, text='History')
-
 tab3 = ttk.Frame(tabs)
 tabs.add(tab3, text='GPA Graph 📈')
 
-
-# ---------------- FUNCTIONS ----------------
+# FUNCTIONS
 def handle_calculate():
     name = name_entry.get()
     course = course_entry.get()
@@ -63,7 +59,7 @@ def load_data():
     for record in records:
         tree.insert('', tk.END, values=record)
 
-# ---------------- TAB 1 UI ----------------
+# TAB 1 UI
 
 heading = ttk.Label(tab1, text="GPA CALCULATOR", font=("Segoe UI", 16, "bold"))
 heading.pack(pady=10)
@@ -90,7 +86,7 @@ calc_btn.pack(pady=10)
 result_label = ttk.Label(tab1, text="GPA: --", font=("Segoe UI", 14, "bold"))
 result_label.pack(pady=15)
 
-# ---------------- TAB 2 UI ----------------
+# TAB 2 UI
 
 columns = ("Date", "Name", "Course", "GPA")
 tree = ttk.Treeview(tab2, columns=columns, show="headings")
@@ -105,7 +101,7 @@ load_data()
 
 tree.pack(expand=1, fill="both", padx=10, pady=10)
 
-# ---------------- TAB 3 (GRAPH) UI ----------------
+# TAB 3 (GRAPH) UI
 
 graph_heading = ttk.Label(tab3, text="GPA PROGRESS GRAPH", font=("Segoe UI", 14, "bold"))
 graph_heading.pack(pady=15)
@@ -134,7 +130,7 @@ def show_graph():
 graph_btn = ttk.Button(tab3, text="Show GPA Graph", command=show_graph)
 graph_btn.pack(pady=10)
 
-# ---------- CLEAR HISTORY BUTTON ----------
+# CLEAR HISTORY BUTTON
 
 def clear_history():
     answer = messagebox.askyesno(
@@ -156,5 +152,6 @@ clear_btn.pack(pady=10)
 
 
 
-# ---------------- RUN APP ----------------
+# RUN APP
 app.mainloop()
+
