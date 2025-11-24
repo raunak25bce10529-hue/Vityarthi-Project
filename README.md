@@ -40,7 +40,7 @@ By entering your subject names, credits, and grades, the application instantly c
 
 1.First, clone the repository to your system: 
 
-      git clone <your-repository-link> 
+      git clone (https://github.com/raunak25bce10529-hue/Vityarthi-Project) 
       
 
 2.Move into the project folder: 
